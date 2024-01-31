@@ -16,14 +16,14 @@ public class SimpleAlert {
 		driver.get("https://www.leafground.com/alert.xhtml");
 		driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/form/div/div[1]/div[1]/button/span[2]")).click();
 		Alert simpleAlert= driver.switchTo().alert();
-		String alert= simpleAlert.getText();
-		System.out.println("alert message is " +alert);
+		String Text= simpleAlert.getText();
+		System.out.println("alert message is " +Text);
 		
 		Thread.sleep(2000);
 	simpleAlert.accept();
 	
 	String verifyMsg= driver.findElement(By.id("simple_result")).getText();
-	System.out.println("verifyMsg");
+	System.out.println(verifyMsg);
 
 	}
 
