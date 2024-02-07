@@ -1,4 +1,4 @@
-package Week6.day1;
+package Week6.day3;
 
 import java.time.Duration;
 
@@ -20,7 +20,7 @@ public class DeleteLead {
 		driver.findElement(By.linkText("Leads")).click();
 		driver.findElement(By.linkText("Find Leads")).click();
 		driver.findElement(By.xpath("//span[text()='Phone']")).click();
-		driver.findElement(By.xpath("//input[@name='phoneNumber']")).sendKeys("99");
+		driver.findElement(By.xpath("//input[@name='phoneNumber']")).sendKeys("78");
 		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
 		Thread.sleep(2000);
 		String leadID = driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a")).getText();
