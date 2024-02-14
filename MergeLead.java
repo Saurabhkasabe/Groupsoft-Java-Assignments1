@@ -1,4 +1,6 @@
-package  Week6.day1;
+package week5.day5;
+
+
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -7,11 +9,11 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
+
 
 public class MergeLead {
-@Test
-	public  void RunMergeLead() throws InterruptedException {
+
+	public static void main(String[] args) throws InterruptedException {
 		ChromeDriver driver  = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://leaftaps.com/opentaps/control/main");
@@ -26,7 +28,7 @@ public class MergeLead {
 		Set<String> allWindows = driver.getWindowHandles();
 		List<String> allhandles = new ArrayList<String>(allWindows);
 		driver.switchTo().window(allhandles.get(1));
-		driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys("babu");
+		driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys("Saurabh");
 		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
 		Thread.sleep(1000);
 		String leadID = driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a")).getText();
@@ -37,7 +39,7 @@ public class MergeLead {
 		Set<String> allWindows2 = driver.getWindowHandles();
 		List<String> allhandles2 = new ArrayList<String>(allWindows2);
 		driver.switchTo().window(allhandles2.get(1));
-		driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys("hari");
+		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/div/div/div[1]/form/div/div[2]/div/div/div/div/div[3]/div[1]/input")).sendKeys("Kasabe");
 		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a")).click();
@@ -58,6 +60,10 @@ public class MergeLead {
 		driver.close();
 
 
+
 	}
 
-}
+	}
+
+
+
